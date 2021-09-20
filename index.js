@@ -2,7 +2,7 @@ const express = require("express")
 const http = require("http")
 const app = express()
 const server = http.createServer(app)
-var port = process.env.PORT || 5000
+var port =  5000
 
 var peers=[];
 
@@ -13,7 +13,6 @@ app.get('/',(req,res) => {
 const io = require("socket.io")(server, {
     cors: {
         origin: "*",
-        methods: ["GET", "POST"]
     }
 })
 
