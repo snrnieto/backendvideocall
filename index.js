@@ -6,7 +6,7 @@ var port = process.env.PORT || 5000
 
 var peers=[];
 
-server.get('/',(req,res) => {
+app.get('/',(req,res) => {
     res.send('Hola mundo')
 })
 
