@@ -5,6 +5,10 @@ const server = http.createServer(app)
 
 var peers=[];
 
+server.get('/',(req,res) => {
+    res.send('Hola mundo')
+})
+
 const io = require("socket.io")(server, {
     cors: {
         origin: "*",
@@ -27,4 +31,4 @@ io.on("connection", (socket) => {
 });
 
 
-server.listen(5000, () => console.log("server is running on port 5000"))
+server.listen(process.env.PORT || 5000, () => console.log("server is running on port 5000"))
