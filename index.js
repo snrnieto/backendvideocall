@@ -2,7 +2,7 @@ const express = require("express")
 const http = require("http")
 const app = express()
 const server = http.createServer(app)
-var port =  5000
+var port = process.env.PORT || 5000
 
 var peers=[];
 
